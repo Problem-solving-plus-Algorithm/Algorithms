@@ -8,8 +8,11 @@ public class SortingMainClass {
         System.out.println("Unsorted array : " + Arrays.toString(unSortedArray));
 
         SelectionSort bubbleSort = new SelectionSort();
-        Integer[] sortedArray = bubbleSort.sort(unSortedArray);
 
-        System.out.println("Sorted Array : " + Arrays.toString(sortedArray));
+        Integer[] sortedArray = bubbleSort.sort(unSortedArray, SortType.ASC);
+        System.out.println("Sorted Array in Ascending Order : " + Arrays.toString(sortedArray));
+
+        sortedArray = bubbleSort.sort(unSortedArray, SortType.DESC);
+        System.out.println("Sorted Array in Descending Order : " + Arrays.toString(sortedArray));
     }
 }
