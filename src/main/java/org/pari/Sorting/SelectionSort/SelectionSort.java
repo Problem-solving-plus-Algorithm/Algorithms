@@ -1,7 +1,12 @@
-package org.pari.Sorting;
+package org.pari.Sorting.SelectionSort;
 
-public class SelectionSort {
-    protected Integer[] sort(Integer[] inputArray, SortType sortType) {
+import org.pari.Sorting.SortType;
+import org.pari.Sorting.SortingStrategy;
+
+public class SelectionSort implements SortingStrategy {
+
+    @Override
+    public Integer[] sort(Integer[] inputArray, SortType sortType) {
         int size = inputArray.length;
         for (int i = 0; i < size; i++) {
             int minOrMaxIndex = i;
