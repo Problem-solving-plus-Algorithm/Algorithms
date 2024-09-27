@@ -74,3 +74,22 @@ Insertion Sort is typically used when:
 - The dataset is small or nearly sorted.
 - Stability is required (preserving the order of equal elements).
 - Memory space is a concern since it uses `O(1)` auxiliary space.
+
+## Stability in Selection Sort:
+Selection Sort is generally considered unstable because it performs swaps based on finding the minimum (or maximum) element and then swapping it with the first unsorted element. If the minimum element has the same value as another element earlier in the array, their relative order will be disrupted during the swap.
+
+### Example of Instability in Selection Sort:
+Consider the following array, where we have two identical elements (3):
+```
+[3A, 2, 3B, 1]
+```
+
+In the first iteration, Selection Sort finds the minimum (1) and swaps it with 3A, leading to:
+
+```
+[1, 2, 3B, 3A]
+```
+
+Now the relative order of the two 3s (3A and 3B) is disturbed—3B is now before 3A, even though 3A appeared first in the original array.
+
+This happens because Selection Sort simply swaps the minimum element, without any regard for whether the elements are equal.
