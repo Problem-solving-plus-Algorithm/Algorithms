@@ -65,6 +65,11 @@ SelectionSort(arr[], n)
 ## Space Complexity
 
 - **Space Complexity:** `O(1)` (in-place sorting)
+- 
+## Characteristics of Selection Sort
+
+- **In-place**: The algorithm sorts the array without using additional memory.
+- **Not Stable**: Selection Sort can rearrange equal elements, so their relative order may change.
 
 ## Use Cases
 

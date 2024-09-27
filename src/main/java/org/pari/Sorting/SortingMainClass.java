@@ -1,5 +1,6 @@
 package org.pari.Sorting;
 
+import org.pari.Sorting.InsertionSort.InsertionSort;
 import org.pari.Sorting.SelectionSort.SelectionSort;
 import org.pari.Sorting.BubbleSort.BubbleSort;
 
@@ -30,6 +31,11 @@ public class SortingMainClass {
         sortingContext.setSortingStrategy(new BubbleSort());
         sortedArray = sortingContext.sortArray(unSortedArray, SortType.DESC);
         System.out.println("Sorted Array in Descending Order with BubbleSort : " + Arrays.toString(sortedArray));
+
+        // Switch to InsertionSort strategy
+        sortingContext.setSortingStrategy(new InsertionSort());
+        sortedArray = sortingContext.sortArray(unSortedArray, SortType.ASC);
+        System.out.println("Sorted Array in Ascending Order with InsertionSort : " + Arrays.toString(sortedArray));
     }
 
     public Integer[] sortArray(Integer[] array, SortType sortType) {

@@ -69,6 +69,11 @@ A small optimization can be applied to Bubble Sort:
 
 - **Space Complexity:** `O(1)` (in-place sorting)
 
+## Characteristics of Bubble Sort
+
+- **In-place**: The algorithm sorts the array without using additional memory.
+- **Stable**: Elements with equal keys remain in their relative positions after sorting.
+
 ## Use Cases
 
 While Bubble Sort is not efficient for large datasets due to its quadratic time complexity, it can be useful in the following cases:
