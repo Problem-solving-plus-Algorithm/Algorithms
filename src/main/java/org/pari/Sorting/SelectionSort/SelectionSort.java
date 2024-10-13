@@ -1,11 +1,16 @@
 package org.pari.Sorting.SelectionSort;
 
 import org.pari.Sorting.SortType;
+import org.pari.Sorting.SortingConfig;
 import org.pari.Sorting.SortingStrategy;
 
 public class SelectionSort implements SortingStrategy {
 
     @Override
+    public Integer[] sort(Integer[] inputArray, SortingConfig sortingConfig) {
+        return sort(inputArray, sortingConfig.getSortType());
+    }
+
     public Integer[] sort(Integer[] inputArray, SortType sortType) {
         int size = inputArray.length;
         for (int i = 0; i < size; i++) {

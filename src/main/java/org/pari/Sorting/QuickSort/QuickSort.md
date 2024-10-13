@@ -18,19 +18,24 @@ Consider the array:
 - **Initial Array**:  
   `[5, 3, 8, 4, 2]`
 
-- **Pass 1** (pivot `5`):  
-  Partition the array around `5`:  
-  `[3, 4, 2, 5, 8]`  
-  Now, `5` is in its correct position.
+- **Pass 1** (pivot `2`):  
+  Partition the array around `2`:  
+  `[2, 4, 3, 5, 8]`  
+  Now, `2` is in its correct position.
 
-- **Pass 2** (subarray `[3, 4, 2]`, pivot `4`):  
-  Partition around `4`:  
-  `[3, 2, 4]`  
-  `4` is now in its correct position.
+- **Pass 2** (subarray `[4, 3, 5, 8]`, pivot `8`):  
+  Partition around `8`:  
+  `[4, 3, 5, 8]`  
+  `8` is now in its correct position.
 
-- **Pass 3** (subarray `[3, 2]`, pivot `3`):  
+- **Pass 3** (subarray `[4, 3, 5]`, pivot `5`):  
+  Partition around `5`:  
+  `[4, 3, 5]`  
+  `5` is now in its correct position.
+- 
+- **Pass 3** (subarray `[4, 3]`, pivot `3`):  
   Partition around `3`:  
-  `[2, 3]`  
+  `[3, 4]`  
   `3` is now in its correct position.
 
 Now the entire array is:  
@@ -70,5 +75,3 @@ Quick Sort is typically used when:
 - The dataset is large, and average-case performance is more important than the worst-case performance.
 - Space complexity needs to be minimized as it operates in place.
 - The data is randomly distributed.
-
-
